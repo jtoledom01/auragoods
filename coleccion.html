@@ -9,8 +9,8 @@
 
 <body>
 
-<header>
-    <h1>AURA GOODS</h1>
+<header class="header">
+    <h1 class="logo">AURA GOODS</h1>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="coleccion.html">Ver colección</a>
@@ -20,33 +20,36 @@
     </nav>
 </header>
 
-<h2 class="title">Nuestra colección</h2>
+<section class="container">
+    <h2>Nuestra colección</h2>
 
-<section class="grid">
+    <div class="grid">
 
-    <div class="card">
-        <img src="camiseta1.png" alt="Camiseta Black Minimal">
-        <h3>Camiseta Black Minimal</h3>
-        <p>Precio: 24.99€</p>
-        <p>Tallas: XS, S, M, L, XL</p>
-        <p>Envío: 3-5 días laborables</p>
-        <button onclick="añadirCarrito('Camiseta Black Minimal',24.99,'camiseta1.png')">
-            Añadir al carrito
-        </button>
+        <div class="card">
+            <img src="camiseta1.png" alt="Camiseta Black Minimal">
+            <h3>Camiseta Black Minimal</h3>
+            <p class="price">24.99€</p>
+            <button onclick="añadirCarrito('Camiseta Black Minimal',24.99,'camiseta1.png')">
+                Añadir al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="sudadera1.png" alt="Sudadera Oversize">
+            <h3>Sudadera Oversize</h3>
+            <p class="price">49.99€</p>
+            <button onclick="añadirCarrito('Sudadera Oversize',49.99,'sudadera1.png')">
+                Añadir al carrito
+            </button>
+        </div>
+
     </div>
-
-    <div class="card">
-        <img src="sudadera1.png" alt="Sudadera Oversize">
-        <h3>Sudadera Oversize</h3>
-        <p>Precio: 49.99€</p>
-        <p>Tallas: XS, S, M, L, XL</p>
-        <p>Envío: 3-5 días laborables</p>
-        <button onclick="añadirCarrito('Sudadera Oversize',49.99,'sudadera1.png')">
-            Añadir al carrito
-        </button>
-    </div>
-
 </section>
+
+<footer class="footer">
+    <p>C/ Alameda, 5, 06400 Don Benito, Badajoz</p>
+    <p>AURAGOODS@gmail.com | 664 894 444</p>
+</footer>
 
 <script>
 function añadirCarrito(nombre, precio, imagen){
@@ -56,11 +59,6 @@ function añadirCarrito(nombre, precio, imagen){
     alert("Producto añadido al carrito");
 }
 </script>
-
-<footer>
-    <p>C/ Alameda, 5, 06400 Don Benito, Badajoz</p>
-    <p>AURAGOODS@gmail.com | 664 894 444</p>
-</footer>
 
 </body>
 </html>
