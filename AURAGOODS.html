@@ -1,117 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Aura Goods | Tienda Online</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura Goods | Página Oficial</title>
 
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#111}
-    a{text-decoration:none;color:inherit}
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;color:#111}
+header{background:#000;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center}
+header h1{letter-spacing:2px}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:bold}
+nav a:hover{opacity:0.7}
 
-    header{background:#fff;border-bottom:1px solid #ddd;padding:15px 30px;display:flex;align-items:center;justify-content:space-between}
-    .logo{width:160px}
-    nav a{margin-left:20px;font-weight:bold;cursor:pointer}
+.hero{height:80vh;background:#111;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.hero h2{font-size:48px;margin-bottom:20px}
+.hero p{max-width:700px;margin-bottom:30px}
+.hero button{padding:12px 25px;border:none;background:#fff;color:#000;font-weight:bold;cursor:pointer}
 
-    .container{padding:30px}
+section{padding:60px 40px}
+section h2{text-align:center;margin-bottom:40px;font-size:32px}
 
-    /* MODAL */
-    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);align-items:center;justify-content:center}
-    .modal-content{background:#fff;padding:20px;border-radius:8px;width:300px;text-align:center}
-    .close{margin-top:15px;display:inline-block;font-weight:bold;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+.card h3{margin-bottom:15px}
 
-    /* GRID */
-    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-    .card{background:#fff;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1);padding:15px;text-align:center}
-    .card img{width:100%;height:250px;object-fit:cover}
+footer{background:#000;color:#fff;text-align:center;padding:30px;margin-top:40px}
+footer p{margin:8px 0}
 
-    button{margin-top:10px;padding:8px 15px;border:none;background:#111;color:#fff;cursor:pointer}
-
-    footer{margin-top:50px;background:#111;color:#fff;padding:25px;text-align:center}
-    footer a{text-decoration:underline;cursor:pointer}
-
-    .hidden{display:none}
-  </style>
+button{transition:0.3s}
+button:hover{opacity:0.8}
+</style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" class="logo" alt="Aura Goods">
-  <nav>
-    <a onclick="openInicio()">Inicio</a>
-    <a onclick="showCollection()">Ver colección</a>
-    <a onclick="showCart()">Carrito</a>
-    <a onclick="showContact()">Contacto</a>
-  </nav>
+<h1>AURA GOODS</h1>
+<nav>
+<a href="#empresa">Empresa</a>
+<a href="#mercado">Mercado</a>
+<a href="#producto">Producto</a>
+<a href="#precios">Precios</a>
+<a href="#comunicacion">Comunicación</a>
+</nav>
 </header>
 
-<div class="container" id="main"></div>
+<section class="hero">
+<h2>Moda urbana con identidad propia</h2>
+<p>Aura Goods es una marca de moda unisex con especial enfoque en el público masculino. Apostamos por prendas actuales, accesibles y alineadas con las tendencias del mercado joven.</p>
+<button onclick="document.getElementById('producto').scrollIntoView({behavior:'smooth'})">Descubrir colección</button>
+</section>
 
-<!-- MODAL INICIO -->
-<div class="modal" id="inicioModal">
-  <div class="modal-content">
-    <h3>Bienvenido a Aura Goods</h3>
-    <p><strong>Ofertas activas</strong></p>
-    <p>Camisetas · Sudaderas · Pantalones · Accesorios</p>
-    <span class="close" onclick="closeInicio()">Cerrar</span>
-  </div>
+<section id="empresa">
+<h2>La Empresa</h2>
+<div class="grid">
+<div class="card">
+<h3>Forma jurídica</h3>
+<p>Aura Goods se constituye como una empresa orientada al comercio textil online, con estructura flexible y enfoque digital.</p>
 </div>
+<div class="card">
+<h3>Localización</h3>
+<p>C/ Alameda, 5, 06400 Don Benito, Badajoz. Operamos principalmente mediante tienda online.</p>
+</div>
+<div class="card">
+<h3>Misión</h3>
+<p>Ofrecer moda urbana de calidad a precios competitivos, creando una identidad de marca reconocible y cercana.</p>
+</div>
+</div>
+</section>
+
+<section id="mercado">
+<h2>Análisis del Mercado</h2>
+<div class="grid">
+<div class="card">
+<h3>Sector</h3>
+<p>El sector textil se caracteriza por alta competencia y constante evolución en tendencias.</p>
+</div>
+<div class="card">
+<h3>Público objetivo</h3>
+<p>Jóvenes entre 16 y 35 años interesados en moda urbana y estilo casual.</p>
+</div>
+<div class="card">
+<h3>Competencia</h3>
+<p>Competimos con marcas urbanas consolidadas diferenciándonos por precio y diseño propio.</p>
+</div>
+</div>
+</section>
+
+<section id="producto">
+<h2>Producto y Producción</h2>
+<div class="grid">
+<div class="card">
+<h3>Camisetas</h3>
+<p>Diseños minimalistas con identidad de marca.</p>
+</div>
+<div class="card">
+<h3>Sudaderas</h3>
+<p>Prendas cómodas, modernas y versátiles.</p>
+</div>
+<div class="card">
+<h3>Pantalones y accesorios</h3>
+<p>Complementos que refuerzan el estilo urbano.</p>
+</div>
+</div>
+</section>
+
+<section id="precios">
+<h2>Precios y Distribución</h2>
+<div class="grid">
+<div class="card">
+<h3>Política de precios</h3>
+<p>Estrategia competitiva con márgenes ajustados para atraer al público joven.</p>
+</div>
+<div class="card">
+<h3>Distribución</h3>
+<p>Venta online mediante tienda digital con envíos nacionales.</p>
+</div>
+</div>
+</section>
+
+<section id="comunicacion">
+<h2>Mercado y Comunicación</h2>
+<div class="grid">
+<div class="card">
+<h3>Marketing</h3>
+<p>Uso de redes sociales, campañas digitales e imagen de marca moderna.</p>
+</div>
+<div class="card">
+<h3>Promoción</h3>
+<p>Ofertas puntuales y estrategias de fidelización de clientes.</p>
+</div>
+</div>
+</section>
 
 <footer>
-  <p>© 2026 Aura Goods · AURAGOODS.ES</p>
-  <p><a onclick="showAbout()">Quiénes somos</a></p>
+<p>© 2026 Aura Goods</p>
+<p>Email: AURAGOODS@gmail.com | Tel: 664 894 444</p>
+<p>C/ Alameda, 5, 06400 Don Benito, Badajoz</p>
 </footer>
-
-<script>
-  const products=[
-    {id:1,name:'Camiseta Aura',price:19.99,img:'camiseta1.png'},
-    {id:2,name:'Sudadera Aura',price:29.99,img:'sudadera1.png'},
-    {id:3,name:'Pantalón Cargo',price:39.99,img:'pantalon1.png'}
-  ];
-  let cart=[];
-
-  function openInicio(){document.getElementById('inicioModal').style.display='flex'}
-  function closeInicio(){document.getElementById('inicioModal').style.display='none'}
-
-  function showCollection(){
-    const main=document.getElementById('main');
-    main.innerHTML='<h1>Colección</h1><div class="products">'+
-      products.map(p=>`
-        <div class="card">
-          <img src="${p.img}">
-          <h3>${p.name}</h3>
-          <p>${p.price} €</p>
-          <p>Tallas: XS · S · M · L · XL</p>
-          <p>Envío: 4,99 €</p>
-          <button onclick="addToCart(${p.id})">Añadir al carrito</button>
-        </div>`).join('')+
-      '</div>';
-  }
-
-  function addToCart(id){cart.push(products.find(p=>p.id===id));alert('Producto añadido al carrito')}
-
-  function showCart(){
-    const main=document.getElementById('main');
-    if(cart.length===0){main.innerHTML='<h2>Carrito vacío</h2>';return}
-    main.innerHTML='<h1>Carrito</h1>'+cart.map(p=>`<p>${p.name} - ${p.price} €</p>`).join('');
-  }
-
-  function showContact(){
-    document.getElementById('main').innerHTML=`
-      <h1>Contacto</h1>
-      <p>Domicilio: C/Alameda, 5, 06400, Don Benito, Badajoz</p>
-      <p>Email: AURAGOODS@gmail.com</p>
-      <p>Teléfono: 664 894 444</p>`;
-  }
-
-  function showAbout(){
-    document.getElementById('main').innerHTML=`
-      <h1>Quiénes somos</h1>
-      <p>Aura Goods es una empresa de moda urbana creada con el objetivo de ofrecer ropa unisex de calidad, con especial enfoque en prendas masculinas. Apostamos por un diseño actual, accesible y alineado con las tendencias del mercado joven.</p>
-      <p>Nuestra misión es proporcionar productos modernos a precios competitivos, cuidando la identidad de marca y la experiencia del cliente.</p>`;
-  }
-</script>
 
 </body>
 </html>
